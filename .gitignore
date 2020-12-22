@@ -1,0 +1,12 @@
+./.idea
+./out
+*.aux
+*.bbl
+*.blg
+*.log
+*.gz
+*.iml
+*.out
+# Project exclude paths
+/out/
+/.idea/

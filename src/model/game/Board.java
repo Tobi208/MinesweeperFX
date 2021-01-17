@@ -1,4 +1,4 @@
-package game;
+package model.game;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -177,7 +177,7 @@ public class Board {
     /**
      * Check if all non-bomb squares are revealed.
      *
-     * @return if game state is a win
+     * @return if model.game state is a win
      */
     public boolean won() {
         for (Square s: squares)

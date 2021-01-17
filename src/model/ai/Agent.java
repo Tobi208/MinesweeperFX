@@ -1,7 +1,7 @@
-package ai;
+package model.ai;
 
-import game.Board;
-import game.Square;
+import model.game.Board;
+import model.game.Square;
 
 import java.util.ArrayList;
 

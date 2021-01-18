@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+          prefHeight="400.0" prefWidth="600.0" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1"
+          xmlns="http://javafx.com/javafx/15.0.1" fx:controller="control.Control">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+    </rowConstraints>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+    </padding>
+    <GridPane>
+      <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+      </columnConstraints>
+      <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+      </rowConstraints>
+        <children>
+          <Label text="Rows"/>
+          <Label text="Columns" GridPane.rowIndex="1"/>
+          <Label text="Bombs" GridPane.rowIndex="2"/>
+          <Label text="Simulations" GridPane.rowIndex="3"/>
+          <TextField fx:id="rowsField" text="16" GridPane.columnIndex="1"/>
+          <TextField fx:id="colsField" text="30" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+          <TextField fx:id="bombsField" text="99" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+          <TextField fx:id="simulationsField" text="50000" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+        </children>
+    </GridPane>
+    <GridPane GridPane.columnIndex="1">
+      <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+      </columnConstraints>
+      <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+      </rowConstraints>
+        <children>
+          <Label text="Start Row"/>
+          <Label text="Start Column" GridPane.rowIndex="1"/>
+          <Label text="Seed" GridPane.rowIndex="2"/>
+          <TextField text="8" GridPane.columnIndex="1"/>
+          <TextField text="15" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+          <TextField text="1234" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+          <Button mnemonicParsing="false" onAction="#simulate" prefHeight="26.0" prefWidth="147.0" text="Simulate"
+                  GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+        </children>
+    </GridPane>
+    <TextArea prefHeight="200.0" prefWidth="200.0"
+              text="MinesweeperFX Solver v0.1&#10;&#10;Enter the number of rows, cols and bombs for the board.&#10;Specify the starting square.&#10;Enter the number of simulations.&#10;Optional: Enter a random seed.&#10;Start simulations."
+              GridPane.columnSpan="2" GridPane.rowIndex="1" editable="false"/>
+</GridPane>
